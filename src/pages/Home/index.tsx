@@ -22,6 +22,8 @@ export const Home = () => {
         <TouchableOpacity activeOpacity={0.7} style={styles.button}>
           <Text style={styles.textButton}>Adicionar</Text>
         </TouchableOpacity>
+
+        <Text style={[styles.title, styles.titleTasks]}>Minhas tarefas</Text>
       </View>
     </SafeAreaView>
   );
@@ -41,6 +43,9 @@ const styles = StyleSheet.create({
     color: '#f1f1f1',
     fontSize: 24,
     fontWeight: 'bold',
+  },
+  titleTasks: {
+    marginTop: 30,
   },
   input: {
     backgroundColor: '#29292e',
