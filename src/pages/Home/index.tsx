@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   TextInput,
   Platform,
+  TouchableOpacity,
 } from 'react-native';
 
 export const Home = () => {
@@ -14,6 +15,9 @@ export const Home = () => {
       <View style={styles.container}>
         <Text style={styles.title}>Bem vindo, Dev!</Text>
         <TextInput style={styles.input} />
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+          <Text style={styles.textButton}>Adicionar</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -41,5 +45,17 @@ const styles = StyleSheet.create({
     padding: 15,
     marginTop: Platform.OS === 'ios' ? 15 : 20,
     borderRadius: 7,
+  },
+  button: {
+    backgroundColor: '#eba417',
+    padding: 15,
+    borderRadius: 7,
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  textButton: {
+    color: '#121214',
+    fontSize: 18,
+    fontWeight: '400',
   },
 });
