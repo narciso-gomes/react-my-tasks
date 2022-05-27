@@ -10,11 +10,14 @@ import {
 } from 'react-native';
 
 export const Home = () => {
+  const [newTask, setNewTask] = React.useState('');
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <Text style={styles.title}>Bem vindo, Dev!</Text>
         <TextInput
+          onChangeText={setNewTask}
           placeholderTextColor="#555"
           placeholder="Nova tarefa..."
           style={styles.input}
