@@ -14,7 +14,11 @@ export const Home = () => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <Text style={styles.title}>Bem vindo, Dev!</Text>
-        <TextInput style={styles.input} />
+        <TextInput
+          placeholderTextColor="#555"
+          placeholder="Nova tarefa..."
+          style={styles.input}
+        />
         <TouchableOpacity activeOpacity={0.7} style={styles.button}>
           <Text style={styles.textButton}>Adicionar</Text>
         </TouchableOpacity>
