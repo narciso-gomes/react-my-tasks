@@ -13,8 +13,9 @@ import {TasksContext} from '../../context/TasksContext';
 
 export const Home = () => {
   const [newTask, setNewTask] = React.useState('');
+  // const tasks = React.useContext(TasksContext);
 
-  const tasks = React.useContext(TasksContext);
+  const task = React.useContext(TasksContext);
 
   const handleAddNewTask = () => {
     const data = {
