@@ -22,7 +22,7 @@ export const Home = () => {
       id: String(new Date().getTime()),
       title: newTask ?? 'Task empty',
     };
-    addTask();
+    addTask(data);
   };
 
   return (

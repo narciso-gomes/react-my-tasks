@@ -3,10 +3,13 @@ import React from 'react';
 interface IProps {
   children: React.ReactElement;
 }
-export interface ITasksContext {
+export interface ITask {
   id: string;
   title: string;
-  addTask(): void;
+}
+export interface ITasksContext {
+  tasks: ITask[];
+  addTask(task: ITask): void;
 }
 
 export const TasksContext = React.createContext<ITasksContext>(
@@ -14,11 +17,14 @@ export const TasksContext = React.createContext<ITasksContext>(
 );
 
 export const TasksProvider: React.FunctionComponent<IProps> = ({children}) => {
-  const addTask = () => {
+  const addTask = (task: ITask) => {
     console.log('addTasks action');
   };
+
+  const tasks = [{id: '1', title: 'Task 01'}];
+
   return (
-    <TasksContext.Provider value={{id: '1', title: 'Task 01', addTask}}>
+    <TasksContext.Provider value={{tasks, addTask}}>
       {children}
     </TasksContext.Provider>
   );
