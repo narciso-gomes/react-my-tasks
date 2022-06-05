@@ -15,13 +15,14 @@ export const Home = () => {
   const [newTask, setNewTask] = React.useState('');
   // const tasks = React.useContext(TasksContext);
 
-  const task = React.useContext(TasksContext);
+  const {addTask} = React.useContext(TasksContext);
 
   const handleAddNewTask = () => {
     const data = {
       id: String(new Date().getTime()),
       title: newTask ?? 'Task empty',
     };
+    addTask();
   };
 
   return (
